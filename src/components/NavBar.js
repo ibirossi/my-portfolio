@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { SocialIcon } from 'react-social-icons'
 
 //activeClassname-> when on page that links to, do something deifferent.
 const NavBar = () => {
@@ -20,7 +21,7 @@ const NavBar = () => {
             activeClassName="text-red-100 bg-red-700"
             className="inflex-flex items-center py-3 px-3 my-6 rounded text-red-300 hover:text-green-800"
           >
-            Blog Posts
+            Blog
           </NavLink>
           <NavLink
             to="/projects"
@@ -34,12 +35,15 @@ const NavBar = () => {
             activeClassName="text-red-100 bg-red-700"
             className="inflex-flex items-center py-3 px-3 my-6 rounded text-red-300 hover:text-green-800"
           >
-            About Me
+            About
           </NavLink>
-          <div>
-            
-          </div>
+          
         </nav>
+        <div className="inline-flex py-3 px-3 my-6">
+            <SocialIcon url="https://github.com/ibirossi" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}}/>
+            <SocialIcon url="https://www.linkedin.com/in/i-ross-homaidan" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}}/>
+
+          </div>
       </div>
     </header>
   );

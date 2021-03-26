@@ -6,7 +6,7 @@ import { SocialIcon } from 'react-social-icons'
 const NavBar = () => {
   // const [effect, setEffect] = useState(false);
   return (
-    <header className="bg-rikbrown w-screen" >
+    <header className="bg-black w-screen" >
       <div className="container mx-auto md:flex justify-between">
         <nav className="w-screen">
         
@@ -28,21 +28,21 @@ const NavBar = () => {
           <NavLink
             to="/post"
             activeClassName="text-rikyellow bg-rikgreen"
-            className="md:inline-flex items-center py-3 px-3 my-6 rounded text-rikpink hover:text-green-800"
+            className="md:inline-flex items-center justify-center rounded py-3 px-3 my-6 md:rounded-full h-24 w-24 text-rikpink hover:text-white"
           >
             Blog
           </NavLink>
           <NavLink
             to="/projects"
             activeClassName="text-rikyellow bg-rikgreen"
-            className="md:inline-flex items-center py-3 px-3 my-6 rounded text-rikpink hover:text-white"
+            className="md:inline-flex items-center justify-center rounded py-3 px-3 my-6 md:rounded-full h-24 w-24 text-rikpink hover:text-white"
           >
             Projects
           </NavLink>
           <NavLink
             to="/about"
             activeClassName="text-rikyellow bg-rikgreen"
-            className="md:inline-flex items-center py-3 px-3 my-6 rounded text-rikpink hover:text-green-800"
+            className="md:inline-flex items-center justify-center rounded py-3 px-3 my-6 md:rounded-full h-24 w-24 text-rikpink hover:text-white"
           >
             About
           </NavLink>

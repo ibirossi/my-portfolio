@@ -4,43 +4,45 @@ import { SocialIcon } from 'react-social-icons'
 
 //activeClassname-> when on page that links to, do something deifferent.
 const NavBar = () => {
-  const [effect, setEffect] =useState(false);
+  // const [effect, setEffect] = useState(false);
   return (
-    <header className="bg-red-600">
-      <div className="container mx-auto flex justify-between">
-        <nav className= {`${
+    <header className="bg-rikbrown w-screen" >
+      <div className="container mx-auto md:flex justify-between">
+        <nav className="w-screen">
+        
+        {/* <nav className= {`${
             effect && "animate-wiggle"
-          } flex`}
+          }`}
           onClick={() => {setEffect(true)
           }}
           onAnimationEnd={() => setEffect(false)}
-          >
+          > */}
           <NavLink
             to="/"
             exact
-            activeClassName="text-white"
-            className="inflex-flex items-center py-3 px-3 mr-4 my-6 text-red-100 hover:text-green-800 onClick:animate-spin font-bold cursive tracking-widest"
+            activeClassName="text-rikgreen"
+            className="flex md:inline-flex items-center py-3 px-3 mr-4 my-auto text-rikpink hover:text-white font-bold cursive tracking-widest"
           >
             Home
           </NavLink>
           <NavLink
             to="/post"
-            activeClassName="text-red-100 bg-red-700"
-            className="inflex-flex items-center py-3 px-3 my-6 rounded text-red-300 hover:text-green-800"
+            activeClassName="text-rikyellow bg-rikgreen"
+            className="md:inline-flex items-center py-3 px-3 my-6 rounded text-rikpink hover:text-green-800"
           >
             Blog
           </NavLink>
           <NavLink
             to="/projects"
-            activeClassName="text-red-100 bg-red-700"
-            className="inflex-flex items-center py-3 px-3 my-6 rounded text-red-300 hover:text-green-800"
+            activeClassName="text-rikyellow bg-rikgreen"
+            className="md:inline-flex items-center py-3 px-3 my-6 rounded text-rikpink hover:text-white"
           >
             Projects
           </NavLink>
           <NavLink
             to="/about"
-            activeClassName="text-red-100 bg-red-700"
-            className="inflex-flex items-center py-3 px-3 my-6 rounded text-red-300 hover:text-green-800"
+            activeClassName="text-rikyellow bg-rikgreen"
+            className="md:inline-flex items-center py-3 px-3 my-6 rounded text-rikpink hover:text-green-800"
           >
             About
           </NavLink>

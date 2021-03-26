@@ -20,29 +20,29 @@ const NavBar = () => {
           <NavLink
             to="/"
             exact
-            activeClassName="text-rikgreen"
+            activeClassName="text-rikgreen bg-rikbg border shadow"
             className="flex md:inline-flex items-center py-3 px-3 mr-4 my-auto text-rikpink hover:text-white font-bold cursive tracking-widest"
           >
             Home
           </NavLink>
           <NavLink
             to="/post"
-            activeClassName="text-rikyellow bg-rikgreen"
-            className="md:inline-flex items-center justify-center rounded py-3 px-3 my-6 md:rounded-full h-24 w-24 text-rikpink hover:text-white"
+            activeClassName="text-rikyellow bg-rikgreen shadow"
+            className="md:inline-flex items-center justify-center rounded py-3 px-3 my-6 md:rounded-full h-14 w14 text-rikpink hover:text-white"
           >
             Blog
           </NavLink>
           <NavLink
             to="/projects"
             activeClassName="text-rikyellow bg-rikgreen"
-            className="md:inline-flex items-center justify-center rounded py-3 px-3 my-6 md:rounded-full h-24 w-24 text-rikpink hover:text-white"
+            className="md:inline-flex items-center justify-center rounded py-3 px-3 my-6 md:rounded-full h-14 w-14 text-rikpink hover:text-white"
           >
             Projects
           </NavLink>
           <NavLink
             to="/about"
             activeClassName="text-rikyellow bg-rikgreen"
-            className="md:inline-flex items-center justify-center rounded py-3 px-3 my-6 md:rounded-full h-24 w-24 text-rikpink hover:text-white"
+            className="md:inline-flex items-center justify-center rounded py-3 px-3 my-6 md:rounded-full h-14 w-14 text-rikpink hover:text-white"
           >
             About
           </NavLink>

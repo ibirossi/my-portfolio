@@ -1,48 +1,40 @@
-import React, { useState }from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { SocialIcon } from 'react-social-icons'
+import { SocialIcon } from 'react-social-icons';
 
 //activeClassname-> when on page that links to, do something deifferent.
 const NavBar = () => {
-  // const [effect, setEffect] = useState(false);
+  
   return (
-    <header className="bg-black w-screen" >
+    <header className="w-screen" >
       <div className="container mx-auto md:flex justify-between">
         <nav className="w-screen">
-        
-        {/* <nav className= {`${
-            effect && "animate-wiggle"
-          }`}
-          onClick={() => {setEffect(true)
-          }}
-          onAnimationEnd={() => setEffect(false)}
-          > */}
           <NavLink
             to="/"
             exact
-            activeClassName="text-rikgreen bg-rikbg border shadow"
-            className="flex md:inline-flex items-center py-3 px-3 mr-4 my-auto text-rikpink hover:text-white font-bold cursive tracking-widest"
+            activeClassName="bg-gray-200"
+            className="flex md:inline-flex items-center py-3 px-3 my-auto hover:text-gray-400 font-bold cursive tracking-widest"
           >
             Home
           </NavLink>
           <NavLink
             to="/post"
-            activeClassName="text-rikyellow bg-rikgreen shadow"
-            className="md:inline-flex items-center justify-center rounded py-3 px-3 my-6 md:rounded-full h-14 w14 text-rikpink hover:text-white"
+            activeClassName="bg-gray-200 px-5 mx-5"
+            className="md:inline-flex items-center justify-center py-3 px-3 my-6 h-14 w14 hover:text-gray-400"
           >
             Blog
           </NavLink>
           <NavLink
             to="/projects"
-            activeClassName="text-rikyellow bg-rikgreen"
-            className="md:inline-flex items-center justify-center rounded py-3 px-3 my-6 md:rounded-full h-14 w-14 text-rikpink hover:text-white"
+            activeClassName="bg-gray-200 px-5 mx-5"
+            className="md:inline-flex items-center justify-center py-3 px-3 my-6 h-14 w-14 hover:text-gray-400"
           >
             Projects
           </NavLink>
           <NavLink
             to="/about"
-            activeClassName="text-rikyellow bg-rikgreen"
-            className="md:inline-flex items-center justify-center rounded py-3 px-3 my-6 md:rounded-full h-14 w-14 text-rikpink hover:text-white"
+            activeClassName="bg-gray-200 px-5 mx-5"
+            className="md:inline-flex items-center justify-center py-3 px-3 my-6 h-14 w-14 hover:text-gray-400"
           >
             About
           </NavLink>

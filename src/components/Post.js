@@ -23,7 +23,7 @@ const Post = () => {
   }, [])
 
     return (
-        <main className="bg-green-100 min-h-screen p-12 w-screen">
+        <main className=" min-h-screen p-12 w-screen">
             <section className="container mx-auto">
                 <h1 className="text-5xl flex justify-center cursive">Blog Posts</h1>
                 <h2 className="text-lg text-gray-600 flex justify-center mb-12">Welcome to my Blog</h2>
@@ -31,7 +31,7 @@ const Post = () => {
                   {postData && postData.map((post, index) => (
                     <article>
                       <Link to={"/post/" + post.slug.current} key={post.slug.current}>
-                        <span className="block h-64 relative rounded shadow-sm leading snug bg-white border-l-8 border-green-400" key={index}>
+                        <span className="block h-64 relative rounded shadow-xl leading snug bg-white border-l-8 border-green-400" key={index}>
                           <img src={post.mainImage.asset.url} alt={post.mainImage.alt} className="w-full h-full rounded-r object-cover absolute"/>
                           <span className="block relative h-full flex justify-end items-end pr-4 pb-4">
                               <h3 className="text-gray-800 text-lg font-bold px-3 py-4 bg-red-700 text-red-100 bg-opacity-75 rounded-sm">{post.title}</h3>

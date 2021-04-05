@@ -6,6 +6,8 @@
   src: local("Varela"), url(./fonts/VarelaRound-Regular.ttf) format("tff");
 }
 
+
+
 .cursive {
   font-family: "Varela", sans-serif;
   font-weight: 700;

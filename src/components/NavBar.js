@@ -1,53 +1,70 @@
-import React from "react";
+import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
-import { SocialIcon } from 'react-social-icons';
+import { MenuIcon } from "@heroicons/react/solid";
 
-//activeClassname-> when on page that links to, do something deifferent.
+
 const NavBar = () => {
-  
-  return (
-    <header className="w-screen" >
-      <div className="container mx-auto md:flex justify-between">
-        <nav className="w-screen">
-          <NavLink
-            to="/"
-            exact
-            activeClassName="bg-gray-200"
-            className="flex md:inline-flex items-center py-3 px-3 my-auto hover:text-gray-400 font-bold cursive tracking-widest"
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/post"
-            activeClassName="bg-gray-200 px-5 mx-5"
-            className="md:inline-flex items-center justify-center py-3 px-3 my-6 h-14 w14 hover:text-gray-400"
-          >
-            Blog
-          </NavLink>
-          <NavLink
-            to="/projects"
-            activeClassName="bg-gray-200 px-5 mx-5"
-            className="md:inline-flex items-center justify-center py-3 px-3 my-6 h-14 w-14 hover:text-gray-400"
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            to="/about"
-            activeClassName="bg-gray-200 px-5 mx-5"
-            className="md:inline-flex items-center justify-center py-3 px-3 my-6 h-14 w-14 hover:text-gray-400"
-          >
-            About
-          </NavLink>
-          
-        </nav>
-        <div className="inline-flex py-3 px-3 my-6">
-            <SocialIcon url="https://github.com/ibirossi" className="mr-4" target="_blank" fgColor="#fff" bgColor="black" style={{height: 35, width: 35}}/>
-            <SocialIcon url="https://www.linkedin.com/in/i-ross-homaidan" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}}/>
+    const [navbarOpen, setNavbarOpen] = useState(false);
+    
+    return (
+        <>
+          <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3">
+            <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+              <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+                <NavLink
+                  to="/"
+                  exact
+                  activeClassName="bg-gray-200"
+                  className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black cursive tracking-widest"
+                >
+                  Home
+                </NavLink>
+                <button
+                  className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                  type="button"
+                  onClick={() => setNavbarOpen(!navbarOpen)}
+                >
+                  <MenuIcon className="h-6 w-6 text-black" />
+                </button>
+              </div>
+              <div
+                className={
+                  "lg:flex flex-grow items-center" +
+                  (navbarOpen ? " flex" : " hidden")
+                }
+                id="example-navbar-danger"
+              >
+                <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+                  <li className="nav-item">
+                    <NavLink
+                      className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
+                      to="/post"
+                    >
+                      <span className="ml-2">Blog</span>
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink
+                      className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
+                      to="/projects"
+                    >
+                      <span className="ml-2">Projects</span>
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink
+                      className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-back hover:opacity-75 hover:underline"
+                      to="/about"
+                    >
+                      <span className="ml-2">About</span>
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </>
+      );
+    }
 
-          </div>
-      </div>
-    </header>
-  );
-};
-
-export default NavBar;
+export default NavBar

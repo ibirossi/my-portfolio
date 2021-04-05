@@ -13,8 +13,6 @@ function App() {
   return (
     <>
     <NavBar />
-    {/* <NavTest /> */}
-    {/* <NavBar /> */}
       <Switch>
         <Route component={Home} path="/" exact />
         <Route component={About} path="/about" />

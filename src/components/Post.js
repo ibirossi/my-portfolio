@@ -7,7 +7,7 @@ const Post = () => {
 
   useEffect(() => {
       sanityClient
-        .fetch(`*[_type=="post"]{
+        .fetch(`*[_type == "post"]{
             title,
             slug,
             mainImage{
@@ -23,7 +23,7 @@ const Post = () => {
   }, [])
 
     return (
-        <main className=" min-h-screen p-12 w-screen">
+        <main className="min-h-screen p-12 w-screen">
             <section className="container mx-auto">
                 <h1 className="text-5xl flex justify-center cursive">Blog Posts</h1>
                 <h2 className="text-lg text-gray-600 flex justify-center mb-12">Welcome to my Blog</h2>

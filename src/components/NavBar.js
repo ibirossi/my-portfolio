@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { MenuIcon } from "@heroicons/react/solid";
+import { MenuIcon, XIcon } from "@heroicons/react/solid";
 
 const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3">
+      <nav className="bg-white opacity-100 relative flex flex-wrap items-center justify-between px-2 py-3 mb-3 sticky top-0 z-50">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <NavLink
@@ -15,7 +15,7 @@ const NavBar = () => {
               to="/"
               exact
               activeClassName="bg-gray-300"
-              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black tracking-widest"
+              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black tracking-widest animate-pulse"
             >
               Home
             </NavLink>
@@ -24,19 +24,20 @@ const NavBar = () => {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <MenuIcon className="h-6 w-6 text-black mr-5" />
+              {(navbarOpen ? <XIcon className="h-8 w-8 p-1 text-black"/>: <MenuIcon className="h-8 w-8 text-black p-1" />)} 
             </button>
           </div>
           <div
+          
             className={
               "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex" : " hidden")
+              (navbarOpen ? " flex w-screen" : " hidden")
             }
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto bg-gray-300">
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li>
                 <NavLink
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75 transition duration-700 ease-in-out transform hover:scale-110 hover:shadow-2xl"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                   to="/post"
                 >
@@ -45,7 +46,7 @@ const NavBar = () => {
               </li>
               <li>
                 <NavLink
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75 transition duration-700 ease-in-out transform hover:scale-110 hover:shadow-2xl"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                   to="/projects"
                 >
@@ -54,7 +55,7 @@ const NavBar = () => {
               </li>
               <li>
                 <NavLink
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-back hover:opacity-75 hover:underline"
+                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-back hover:opacity-75 transition duration-700 ease-in-out transform hover:scale-110 hover:shadow-2xl"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                   to="/about"
                 >

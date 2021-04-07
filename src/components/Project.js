@@ -39,7 +39,8 @@ const Project = () => {
         <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectData &&
             projectData.map((project, index) => (
-              <article className="block h-64 relative rounded shadow-xl leading snug bg-white border-l-4 border-green-400 pl-5 overflow-y-auto pb-20">
+              <article className="block h-100 relative rounded shadow-xl leading snug bg-white border-l-4 border-green-400 pl-5 overflow-y-auto pb-20">
+              
                 <h3 className="text-gray-800 text-lg font-bold mb-2 hover:text-red-700">
                   <a
                     href={project.link}

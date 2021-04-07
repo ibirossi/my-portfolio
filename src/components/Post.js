@@ -29,7 +29,7 @@ const Post = () => {
                 <h2 className="text-lg text-gray-600 flex justify-center mb-12">Welcome to my Blog</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {postData && postData.map((post, index) => (
-                    <article>
+                    <article className="transition duration-500 ease-in-out transform hover:-translate-y-5 hover:scale-110">
                       <Link to={"/post/" + post.slug.current} key={post.slug.current}>
                         <span className="block h-64 relative rounded shadow-xl leading snug bg-white border-l-8 border-green-400" key={index}>
                           <img src={post.mainImage.asset.url} alt={post.mainImage.alt} className="w-full h-full rounded-r object-cover absolute"/>

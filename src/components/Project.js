@@ -32,16 +32,16 @@ const Project = () => {
   return (
     <main className="min-h-screen p-12 w-screen bg-gray-100">
       <section className="container mx-auto">
-        <h1 className="text-5xl flex justify-center cursive">My Projects</h1>
+        <h1 className="text-gray-700 text-5xl flex justify-center cursive">My Projects</h1>
         <h2 className="text-lg text-gray-600 flex justify-center mb-12">
           Welcome to my projects page!
         </h2>
         <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectData &&
             projectData.map((project, index) => (
-              <article className="block h-100 relative rounded shadow-xl leading snug bg-white border-l-4 border-green-400 pl-5 overflow-y-auto pb-20">
+              <article className="block h-100 relative rounded shadow-xl leading snug bg-white border-l-4 border-gray-700 pl-5 overflow-y-auto pb-20">
               
-                <h3 className="text-gray-800 text-lg font-bold mb-2 hover:text-red-700">
+                <h3 className="text-gray-700 text-lg font-bold mb-2 hover:text-red-700">
                   <a
                     href={project.link}
                     alt={project.title}

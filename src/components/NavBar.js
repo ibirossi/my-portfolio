@@ -7,14 +7,14 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="bg-white opacity-100 relative flex flex-wrap items-center justify-between px-2 py-3 mb-3 sticky top-0 z-50">
+      <nav className="bg-white opacity-100 relative flex flex-wrap items-center justify-between px-2 py-3 mb-3 sticky top-0 z-50 subpixel-antialiased">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <NavLink
               onClick={() => setNavbarOpen(false)}
               to="/"
               exact
-              activeClassName="bg-gray-300"
+              // activeClassName="bg-gray-300"
               className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black tracking-widest animate-pulse"
             >
               Home
@@ -31,13 +31,13 @@ const NavBar = () => {
           
             className={
               "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex w-screen" : " hidden")
+              (navbarOpen ? " flex fade-in-slow md:animation-none" : " hidden")
             }
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto text-xs md:text-base border rounded-none md:rounded-full shadow-sm">
               <li>
                 <NavLink
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75 transition duration-700 ease-in-out transform hover:scale-110 hover:shadow-2xl"
+                  className="px-3 py-2 flex items-center uppercase font-bold leading-snug bg-white rounded-full hover:opacity-75 transition duration-500 ease-in-out  transform hover:scale-110 hover:shadow-2xl"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                   to="/post"
                 >
@@ -46,7 +46,7 @@ const NavBar = () => {
               </li>
               <li>
                 <NavLink
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75 transition duration-700 ease-in-out transform hover:scale-110 hover:shadow-2xl"
+                  className="px-3 py-2 flex items-center uppercase font-bold leading-snug rounded-full hover:opacity-75 transition duration-500 ease-in-out transform hover:scale-110 hover:shadow-2xl"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                   to="/projects"
                 >
@@ -55,7 +55,7 @@ const NavBar = () => {
               </li>
               <li>
                 <NavLink
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-back hover:opacity-75 transition duration-700 ease-in-out transform hover:scale-110 hover:shadow-2xl"
+                  className="px-3 py-2 flex items-center uppercase font-bold leading-snug rounded-full hover:opacity-75 transition duration-500 ease-in-out transform hover:scale-110 hover:shadow-2xl"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                   to="/about"
                 >

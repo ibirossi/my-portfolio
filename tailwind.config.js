@@ -31,13 +31,15 @@ module.exports = {
         rikbg: "rgba(151,206,76,0.4)",
         orang: "#ffedd5",
       },
-      backgroundImage: theme => ({
-        'myBG': "url('/src/sebastien-garnier-gsv-fields-06.jpg')"
-      })
+      animation: {
+        'slow-ping': 'ping 2s cubic-bezier(0, 0, 0.2, 1) 1'
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ['hover', 'focus'],
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };

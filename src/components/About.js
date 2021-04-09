@@ -35,8 +35,8 @@ const About = () => {
       {/* <img className="absolute w-full"/> */}
       <div className="p-10 lg:pt-48 mx-auto container relative">
         <section className="rounded-lg shadow-2xl lg:flex p-200 lg:p-20">
-          <img src={urlFor(author.authorImage).url() } alt={author.name} className="rounded w-32 h-32 lg:w-64 lg:h-64 mr-8" />
-          <div className="text-lg flex flex-col justify-center">
+          <img src={urlFor(author.authorImage).url() } alt={author.name} className="rounded w-32 h-32 lg:w-64 lg:h-64 mx-auto " />
+          <div className="text-lg flex flex-col justify-center p-4">
             <h1 className="cursive text-6xl mb-4">Hey there! I'm{" "}
               <span className="text-green-100">{author.name}</span>
             </h1>

@@ -31,7 +31,7 @@ const Post = () => {
                   {postData && postData.map((post, index) => (
                     <article className="transition duration-500 ease-in-out transform hover:-translate-y-5 hover:scale-110">
                       <Link to={"/post/" + post.slug.current} key={post.slug.current}>
-                        <span className="block h-64 relative rounded shadow-xl leading snug bg-white border-l-8 border-green-400" key={index}>
+                        <span className="block h-64 relative rounded shadow-xl leading snug bg-white border-l-8 border-red-700" key={index}>
                           <img src={post.mainImage.asset.url} alt={post.mainImage.alt} className="w-full h-full rounded-r object-cover absolute"/>
                           <span className="block relative h-full flex justify-end items-end pr-4 pb-4">
                               <h3 className="text-gray-800 text-lg font-bold px-3 py-4 bg-red-700 text-red-100 bg-opacity-75 rounded-sm">{post.title}</h3>

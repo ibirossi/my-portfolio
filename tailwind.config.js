@@ -34,11 +34,17 @@ module.exports = {
       animation: {
         'slow-ping': 'ping 2s cubic-bezier(0, 0, 0.2, 1) 1'
       },
+      backgroundImage: theme => ({
+        'hero-pattern': "url('/src/logo.svg')",
+        
+       })
     },
   },
   variants: {
     extend: {
       animation: ['hover', 'focus'],
+      outline: ['hover', 'active'],
+      borderWidth: ['hover', 'active'],
     },
   },
   plugins: [require("@tailwindcss/typography")],

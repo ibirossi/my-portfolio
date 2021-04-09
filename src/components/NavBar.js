@@ -7,7 +7,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="bg-white opacity-100 relative flex flex-wrap items-center justify-between px-2 py-3 mb-3 sticky top-0 z-50 subpixel-antialiased">
+      <nav className="bg-white opacity-100 relative flex flex-wrap items-center justify-between px-2 py-3 mb-0 sticky top-0 z-50">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <NavLink

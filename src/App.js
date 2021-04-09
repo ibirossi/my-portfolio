@@ -6,6 +6,7 @@ import Post from './components/Post';
 import Project from './components/Project';
 import NavBar from './components/NavBar';
 import MockHome from './components/MockHome';
+import MockCard from './components/MockCard'
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route component={Post} path="/post" />
         <Route component={Project} path="/projects" />
         <Route component={MockHome} path="/mock" />
+        <Route component={MockCard} path="/mockcard" />
       </Switch>
     </>
     

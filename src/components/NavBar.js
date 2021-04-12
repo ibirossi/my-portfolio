@@ -37,7 +37,7 @@ const NavBar = () => {
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto text-xs md:text-base border rounded-none md:rounded-full shadow-sm">
               <li>
                 <NavLink
-                  className="px-3 py-2 flex items-center uppercase font-bold leading-snug bg-white rounded-full hover:opacity-75 transition duration-500 ease-in-out  transform hover:scale-110 hover:shadow-2xl"
+                  className="px-3 py-2 flex items-center uppercase font-bold leading-snug bg-white rounded-full hover:opacity-75 transition duration-400 ease-in-out  transform hover:scale-110 hover:shadow-2xl"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                   to="/post"
                 >

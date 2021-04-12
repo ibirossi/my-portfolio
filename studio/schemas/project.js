@@ -53,7 +53,7 @@ export default {
         },
       ],
       options: {
-        layout: "tags",
+        layout: "grid",
       },
     },
   ],

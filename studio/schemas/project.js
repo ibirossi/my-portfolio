@@ -56,5 +56,11 @@ export default {
         layout: "grid",
       },
     },
+    {
+      name: 'imagesGallery',
+      title: 'Images gallery',
+      type: 'array',
+      of: [{ type: 'image' }]
+     }
   ],
 };

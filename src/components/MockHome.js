@@ -5,7 +5,7 @@ const MockHome = () => {
   return (
     <main className="relative">
       <div className="container mx-auto flex justify-center align-center items-center bg-hero-pattern min-h-screen relative bg-center bg-no-repeat">
-        <h1 className="absolute">Hi There!</h1>
+        <h1 className="absolute bg-white shadow-lg sm:rounded-3xl sm:p-20 bg-clip-padding bg-opacity-60 border border-gray-200" style={{backdropFilter: "blur(3px)"}}>Hi There!</h1>
       </div>
       <div className="p-10 lg:pt-48 mx-auto container relative min-h-screen">
         <section className="rounded-lg shadow-2xl lg:flex lg:justify-space-between p-200 lg:p-20 min-h-full">

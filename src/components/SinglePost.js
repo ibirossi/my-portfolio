@@ -42,7 +42,7 @@ const SinglePost = () => {
       <article className="container mx-auto shadow-lg shadow-lg rounded-lg">
         <header className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
-            <div className="bg-white bg-opacity-75 rounded p-12">
+            <div className="bg-white shadow-lg sm:rounded-3xl sm:p-20 bg-clip-padding bg-opacity-60 border border-gray-200" style={{backdropFilter: "blur(5px)"}}>
               <h1 className="cursive text-3xl lg:text-6xl mb-4">
                 {singlePost.title}
               </h1>

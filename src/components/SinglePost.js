@@ -38,7 +38,7 @@ const SinglePost = () => {
   if (!singlePost) return <div>Loading...</div>;
 
   return (
-    <main className="bg-gray-200 min-h-screen p-12">
+    <main className="bg-gray-100 min-h-screen p-12">
       <article className="container mx-auto shadow-lg shadow-lg rounded-lg">
         <header className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">

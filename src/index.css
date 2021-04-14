@@ -7,7 +7,6 @@
 }
 
 
-
 .cursive {
   font-family: "Varela", sans-serif;
   font-weight: 700;
@@ -19,9 +18,9 @@
   border-radius: 5px;
 }
 
-/* .home-name {
+.home-name {
   font-size: 2.5rem;
-} */
+}
 
 
 .fade-in {
@@ -62,3 +61,4 @@
     opacity: 1;
   }
 }
+

@@ -39,8 +39,8 @@ const MockCard = () => {
 
   return (
    
-    <main className="min-h-screen p-12 w-screen bg-gray-100">
-      <section className="container mx-auto">
+    <main className="min-h-screen p-12 w-screen">
+      <section className="container mx-auto relative">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         
           {projectData &&
@@ -51,11 +51,11 @@ const MockCard = () => {
                     <img
                       className="h-48 w-full object-cover md:w-48 rounded"
                       src={project.mainImage.asset.url}
-                      alt="Man looking at item at a store"
+                      alt={project.alt}
                     />
                   </div>
                   <div className="p-8">
-                    <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+                    <div className="uppercase tracking-wide text-sm text-gray-500 font-semibold">
                       {project.title}
                       
                       
@@ -85,8 +85,8 @@ const MockCard = () => {
                 </div>
                 {console.log("images", project.imagesGallery)}
                 {project.imagesGallery.map((pic, index) =>{
-                  return <div className="fade-in p-2">
-                  <span><img className="w-6 h-6" src={pic.asset.url} /></span>
+                  return <div className="fade-in p-2 flex inline-flex align-center justify-center">
+                  <span key={index}><img className="w-8 h-8" src={pic.asset.url} alt={pic.asset.alt} /></span>
                   </div>
                 })}
                 

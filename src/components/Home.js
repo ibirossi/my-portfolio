@@ -1,10 +1,11 @@
 import React from "react";
+import MockHome from "./MockHome"
 import logo from "../logo.svg";
 
 const Home = () => {
   return (
-    <main className="min-h-screen p-12 w-screen relative">
-      <section className="container mx-auto flex justify-center align-center items-center">
+    <main className="p-12 w-screen relative">
+      <section className="container mx-auto flex justify-center align-center items-center min-h-screen">
         <div className="">
           <div className="">
             <div className="flex justify-center align-center items-center">
@@ -26,6 +27,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <MockHome />
     </main>
   );
 };

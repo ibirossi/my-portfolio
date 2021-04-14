@@ -6,8 +6,8 @@ const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <>
-      <nav className="bg-white opacity-100 relative flex flex-wrap items-center justify-between px-2 py-3 mb-0 sticky top-0 z-50">
+    <header className="bg-white opacity-100 sticky top-0 z-40 mb-0 pt-6 pb-6">
+      <nav className="bg-white opacity-100 relative flex flex-wrap items-center justify-between px-2 py-3 mb-0 sticky top-0 z-40">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <NavLink
@@ -66,7 +66,7 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-    </>
+    </header>
   );
 };
 

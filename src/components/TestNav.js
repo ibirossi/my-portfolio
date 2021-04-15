@@ -24,20 +24,20 @@ const TestNav = () => {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              {(navbarOpen ? <XIcon className="h-8 w-8 p-1 text-black"/>: <MenuIcon className="h-8 w-8 text-black p-1" />)} 
+              {(navbarOpen ? <XIcon className="h-8 w-8 p-1 text-black fade-in"/>: <MenuIcon className="h-8 w-8 text-black p-1 fade-in" />)} 
             </button>
           </div>
           <div
           
             className={
               "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex fade-in-slow md:animation-none" : " hidden")
+              (navbarOpen ? " flex fade-in md:animation-none" : " hidden")
             }
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto text-xs md:text-base">
               <li>
                 <NavLink
-                  className="button button--nina px-5 py-0 relative block text-center tracking-widest overflow-hidden flex items-center uppercase font-bold leading-snug bg-white hover:opacity-75 ml-2"
+                  className="nina px-5 py-0 relative block text-center tracking-widest overflow-hidden flex items-center uppercase font-bold leading-snug bg-white hover:opacity-75 ml-2"
                   data-text="Blog"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                   to="/post"
@@ -50,7 +50,7 @@ const TestNav = () => {
               </li>
               <li>
                 <NavLink
-                  className="button--nina px-5 py-0 relative block text-center tracking-widest overflow-hidden flex items-center uppercase font-bold leading-snug bg-white hover:opacity-75 ml-2"
+                  className="nina px-5 py-0 relative block text-center tracking-widest overflow-hidden flex items-center uppercase font-bold leading-snug bg-white hover:opacity-75 ml-2"
                   data-text="Projects"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                   to="/projects"
@@ -67,7 +67,7 @@ const TestNav = () => {
               </li>
               <li>
                 <NavLink
-                  className="button--nina px-5 py-0 relative block text-center tracking-widest overflow-hidden flex items-center uppercase font-bold leading-snug bg-white hover:opacity-75 ml-2"
+                  className="nina px-5 py-0 relative block text-center tracking-widest overflow-hidden flex items-center uppercase font-bold leading-snug bg-white hover:opacity-75 ml-2"
                   data-text="About"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                   to="/about"

@@ -6,10 +6,10 @@ const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <header className="bg-white opacity-100 sticky top-0 z-40 mb-0 pt-6 pb-6">
-      <nav className="bg-white opacity-100 relative flex flex-wrap items-center justify-between px-2 py-3 mb-0 sticky top-0 z-40">
+    <header className="bg-white opacity-100 sticky top-0 z-40 mb-0 pt-6 pb-6 outline-black">
+      <nav className="bg-white opacity-100 relative flex flex-wrap items-center justify-between px-2 py-3 mb-0 sticky top-0 z-40 outline-black">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start outline-black">
             <NavLink
               onClick={() => setNavbarOpen(false)}
               to="/"
@@ -24,17 +24,17 @@ const NavBar = () => {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              {(navbarOpen ? <XIcon className="h-8 w-8 p-1 text-black"/>: <MenuIcon className="h-8 w-8 text-black p-1" />)} 
+              {(navbarOpen ? <XIcon className="h-8 w-8 p-1 text-black fade-in"/>: <MenuIcon className="h-8 w-8 text-black p-1 fade-in" />)} 
             </button>
           </div>
           <div
           
             className={
               "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex fade-in-slow md:animation-none" : " hidden")
+              (navbarOpen ? " flex fade-in md:animation-none" : " hidden")
             }
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto text-xs md:text-base border rounded-none md:rounded-full shadow-sm">
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto text-xs md:text-base border rounded-none md:rounded-full shadow-sm outline-black">
               <li>
                 <NavLink
                   className="px-3 py-2 flex items-center uppercase font-bold leading-snug bg-white rounded-full hover:opacity-75 transition duration-400 ease-in-out  transform hover:scale-110 hover:shadow-2xl"

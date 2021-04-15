@@ -31,13 +31,85 @@ module.exports = {
         rikbg: "rgba(151,206,76,0.4)",
         orang: "#ffedd5",
       },
-      animation: {
-        'slow-ping': 'ping 2s cubic-bezier(0, 0, 0.2, 1) 1'
-      },
+
       backgroundImage: theme => ({
         'hero-pattern': "url('/src/logo.svg')",
         
-       })
+       }),
+
+       keyframes: {
+         'fade-in':{
+            '0%': {
+              opacity: '0'
+            },
+            '100%': {
+              opacity: '100'
+            }
+         },
+         
+        'fade-in-down': {
+            '0%': {
+                opacity: '0',
+                transform: 'translateY(-10px)'
+            },
+            '100%': {
+                opacity: '1',
+                transform: 'translateY(0)'
+            },
+        },
+        'fade-out-down': {
+            'from': {
+                opacity: '1',
+                transform: 'translateY(0px)'
+            },
+            'to': {
+                opacity: '0',
+                transform: 'translateY(10px)'
+            },
+        },
+        'fade-in-up': {
+            '0%': {
+                opacity: '0',
+                transform: 'translateY(10px)'
+            },
+            '100%': {
+                opacity: '1',
+                transform: 'translateY(0)'
+            },
+        },
+        'fade-out-up': {
+            'from': {
+                opacity: '1',
+                transform: 'translateY(0px)'
+            },
+            'to': {
+                opacity: '0',
+                transform: 'translateY(10px)'
+            },
+        },
+
+        'fade-in-left': {
+          '0%': {
+              opacity: '0',
+              transform: 'translateX(-100px)'
+          },
+          '100%': {
+              opacity: '1',
+              transform: 'translateX(0)'
+          },
+      },
+
+    },
+    animation: {
+        'fade-in-slow': 'fade-in 10s',
+        'fade-in-down': 'fade-in-down 0.5s ease-out',
+        'fade-out-down': 'fade-out-down 0.5s ease-out',
+        'fade-in-up': 'fade-in-up 1s ease-out',
+        'fade-out-up': 'fade-out-up 0.5s ease-out',
+        'fade-in-left': 'fade-in-left 1s ease-out',
+        'slow-ping': 'ping 1s cubic-bezier(0, 0, 0.2, 1) 1',
+    }
+       
     },
   },
   variants: {

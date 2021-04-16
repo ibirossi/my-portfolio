@@ -78,13 +78,13 @@ module.exports = {
             },
         },
         'fade-out-up': {
-            'from': {
+            '0%': {
                 opacity: '1',
-                transform: 'translateY(0px)'
+                transform: 'translateY(100%)'
             },
-            'to': {
+            '100%': {
                 opacity: '0',
-                transform: 'translateY(10px)'
+                transform: 'translateY(-150%)'
             },
         },
 
@@ -99,14 +99,37 @@ module.exports = {
           },
       },
 
+      'slide-in-element-left': {
+        '0%': {
+            opacity: '0',
+            transform: 'translateX(-150%)'
+        },
+        '100%': {
+            opacity: '1',
+            transform: 'translateX(0px)'
+        },
+    },
+    'slide-in-element-right': {
+      '0%': {
+          opacity: '0',
+          transform: 'translateX(150%)'
+      },
+      '100%': {
+          opacity: '1',
+          transform: 'translateX(0px)'
+      },
+  },
+
     },
     animation: {
-        'fade-in-slow': 'fade-in 10s',
+        'fade-in-slow': 'fade-in 5s',
         'fade-in-down': 'fade-in-down 0.5s ease-out',
         'fade-out-down': 'fade-out-down 0.5s ease-out',
         'fade-in-up': 'fade-in-up 1s ease-out',
         'fade-out-up': 'fade-out-up 0.5s ease-out',
         'fade-in-left': 'fade-in-left 1s ease-out',
+        'slide-in-element-left': 'slide-in-element-left 1s ease-in-out',
+        'slide-in-element-right': 'slide-in-element-right 1s ease-in-out',
         'slow-ping': 'ping 1s cubic-bezier(0, 0, 0.2, 1) 1',
     }
        

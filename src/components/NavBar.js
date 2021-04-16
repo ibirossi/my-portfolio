@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
 
+
 const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <header className="bg-white opacity-100 sticky top-0 z-40 mb-0 pt-6 pb-6 outline-black">
-      <nav className="bg-white opacity-100 relative flex flex-wrap items-center justify-between px-2 py-3 mb-0 sticky top-0 z-40 outline-black">
+    <header className="bg-white opacity-100 sticky top-0 z-40 mb-0 pt-6 pb-6">
+      <nav className="bg-white opacity-100 relative flex flex-wrap items-center justify-between px-2 py-3 mb-0 sticky top-0 z-40">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start outline-black">
+          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <NavLink
               onClick={() => setNavbarOpen(false)}
               to="/"
@@ -31,10 +32,10 @@ const NavBar = () => {
           
             className={
               "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex fade-in md:animation-none" : " hidden")
+              (navbarOpen ? " flex animate-slide-in-element-left md:animate-none" : " hidden") 
             }
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto text-xs md:text-base border rounded-none md:rounded-full shadow-sm outline-black">
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto text-xs md:text-base md:border md:rounded-full md:shadow-sm">
               <li>
                 <NavLink
                   className="px-3 py-2 flex items-center uppercase font-bold leading-snug bg-white rounded-full hover:opacity-75 transition duration-400 ease-in-out  transform hover:scale-110 hover:shadow-2xl"

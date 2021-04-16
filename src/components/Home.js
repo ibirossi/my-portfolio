@@ -1,17 +1,19 @@
 import React from "react";
-import MockHome from "./MockHome"
-import memoji from "../memoji.png"
+import MockHome from "./MockHome";
+import memoji from "../memoji.png";
+
 
 const Home = () => {
   return (
     <main className="p-12 relative">
-      <section className="container mx-auto flex justify-center align-center items-center min-h-screen">
+      <section className="container mx-auto flex justify-center align-center lg:pt-36 min-h-screen">
         <div className="">
           <div className="">
             <div className="flex justify-center align-center items-center">
               <img src={memoji} alt="logo" className="animate-fade-in-slow h-20 w-20" />
             </div>
             <div>
+            
               <span className="animate-fade-in-up font-bold text-lg md:text-5xl flex justify-center cursive">
                 Ross Homaidan
               </span>
@@ -29,6 +31,8 @@ const Home = () => {
         </div>
       </section>
       <MockHome />
+      <div>
+      </div>
     </main>
   );
 };

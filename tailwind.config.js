@@ -70,13 +70,26 @@ module.exports = {
         'fade-in-up': {
             '0%': {
                 opacity: '0',
-                transform: 'translateY(10px)'
+                transform: 'translateY(50%)'
+                
             },
             '100%': {
                 opacity: '1',
                 transform: 'translateY(0)'
             },
         },
+        'scale-in-up': {
+          '0%': {
+              opacity: '0',
+              transform: 'translateY(100%) scale(0.1)'
+              
+          },
+          '100%': {
+              opacity: '1',
+              transform: 'translateY(0) scale(1.0)'
+          },
+      },
+
         'fade-out-up': {
             '0%': {
                 opacity: '1',
@@ -126,6 +139,7 @@ module.exports = {
         'fade-in-down': 'fade-in-down 0.5s ease-out',
         'fade-out-down': 'fade-out-down 0.5s ease-out',
         'fade-in-up': 'fade-in-up 1s ease-out',
+        'scale-in-up': 'scale-in-up 1s ease-out',
         'fade-out-up': 'fade-out-up 0.5s ease-out',
         'fade-in-left': 'fade-in-left 1s ease-out',
         'slide-in-element-left': 'slide-in-element-left 1s ease-in-out',

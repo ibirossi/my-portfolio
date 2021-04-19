@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
 
+
 const TestNav = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
@@ -24,16 +25,18 @@ const TestNav = () => {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              {(navbarOpen ? <XIcon className="h-8 w-8 p-1 text-black fade-in"/>: <MenuIcon className="h-8 w-8 text-black p-1 fade-in" />)} 
+              {(navbarOpen ? <XIcon className="h-8 w-8 p-1 text-black"/>: <MenuIcon className="h-8 w-8 text-black p-1 fade-in" />)} 
             </button>
           </div>
+
           <div
-          
-            className={
-              "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex fade-in md:animation-none" : " hidden")
-            }
+            
+            // className={
+            //   "lg:flex flex-grow items-center" +
+            //   (navbarOpen ? " flex fade-in md:animation-none" : " hidden")
+            // }
           >
+         
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto text-xs md:text-base">
               <li>
                 <NavLink
@@ -80,6 +83,7 @@ const TestNav = () => {
                 </NavLink>
               </li>
             </ul>
+            
           </div>
         </div>
       </nav>

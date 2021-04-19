@@ -31,7 +31,7 @@ const Project = () => {
   }, []);
   return (
     <main className="min-h-screen p-12 w-screen bg-gray-100">
-      <section className="container mx-auto pt-16 md:pt-6">
+      <section className="container mx-auto">
         <h1 className="text-gray-700 text-5xl flex justify-center cursive">My Projects</h1>
         <h2 className="text-lg text-gray-600 flex justify-center mb-12">
           Welcome to my projects page!

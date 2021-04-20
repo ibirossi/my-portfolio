@@ -80,9 +80,9 @@ const HomeInfo = () => {
           </section>
         </Fade>
       </div>
-      <div className="p-1 md:p-10 lg:pt-5 mx-auto container relative min-h-screen mb-20">
+      <div className="p-1 md:p-10 lg:pt-5 mx-auto container relative min-h-screen">
         <Fade left>
-          <section className="rounded-lg shadow-sm lg:flex p-200 lg:p-10 min-h-max">
+          <section className="rounded-lg shadow-sm lg:flex p-2 lg:p-10">
             <img
               src={blogpic}
               alt="logo"

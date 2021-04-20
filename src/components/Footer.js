@@ -2,10 +2,12 @@ import React from "react";
 import { RiLinkedinBoxFill, RiGithubFill } from "react-icons/ri";
 import mailme from "../mailme.png"
 import Reveal from "react-reveal/Reveal";
+import Fade from "react-reveal/Fade"
 
 const Footer = () => {
   return (
-    <footer className="px-auto min-h-full p-10 bg-yellow-400">
+    <Fade bottom delay={700}>
+    <footer className="min-h-screen relative p-10 bg-yellow-400">
       <div className="flex flex-col items-center p-0">
         <h1 className="font-black text-lg">Follow me</h1>
 
@@ -24,6 +26,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </Fade>
   );
 };
 

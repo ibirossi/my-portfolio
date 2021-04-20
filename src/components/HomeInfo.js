@@ -9,7 +9,7 @@ import Reveal from "react-reveal/Reveal";
 
 const HomeInfo = () => {
   return (
-    <main className="relative">
+    <div className="relative">
       <div className="p-1 md:p-10 lg:pt-5 mx-auto container relative min-h-screen">
         <Reveal effect="animate-scale-in-up">
           <section className="rounded-lg shadow-sm lg:flex p-2 lg:p-10">
@@ -53,7 +53,7 @@ const HomeInfo = () => {
 
       <div className="p-1 md:p-10 lg:pt-5 mx-auto container relative min-h-screen">
         <Fade right>
-          <section className="rounded-lg shadow-sm lg:flex p-200 lg:p-10 min-h-full">
+          <section className="rounded-lg shadow-sm lg:flex p-2 lg:p-10">
             <div className="text-lg flex flex-col mx-auto">
               <h1 className="cursive text-lg lg:text-6xl mb-4 p-4 mx-auto">
                 <span className="text-black">Projects</span>
@@ -80,9 +80,9 @@ const HomeInfo = () => {
           </section>
         </Fade>
       </div>
-      <div className="p-1 md:p-10 lg:pt-5 mx-auto container relative min-h-screen">
+      <div className="p-1 md:p-10 lg:pt-5 mx-auto container relative min-h-screen mb-20">
         <Fade left>
-          <section className="rounded-lg shadow-sm lg:flex p-200 lg:p-10 min-h-full">
+          <section className="rounded-lg shadow-sm lg:flex p-200 lg:p-10 min-h-max">
             <img
               src={blogpic}
               alt="logo"
@@ -111,7 +111,7 @@ const HomeInfo = () => {
           </section>
         </Fade>
       </div>
-    </main>
+  </div>
   );
 };
 

@@ -2,10 +2,11 @@ import React from "react";
 import HomeInfo from "./HomeInfo";
 import memoji from "../memoji.png";
 import pointdown from "../pointdown.png"
+import Footer from "./Footer";
 
 const Home = () => {
   return (
-    <main className="p-12 relative">
+    <main className="p-0 relative">
       <section className="container mx-auto flex justify-center align-center md:pt-36 min-h-screen">
         <div className="">
           <div className="">
@@ -36,7 +37,7 @@ const Home = () => {
         </div>
       </section>
       <HomeInfo />
-      <div></div>
+      <Footer />
     </main>
   );
 };

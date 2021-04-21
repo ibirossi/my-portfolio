@@ -5,7 +5,7 @@ import SinglePost from './components/SinglePost';
 import Post from './components/Post';
 import NavBar from './components/NavBar';
 import Projects from './components/Projects';
-import TestNav from './components/TestNav';
+
 
 
 
@@ -20,8 +20,6 @@ function App() {
         <Route component={SinglePost} path="/post/:slug" />
         <Route component={Post} path="/post" />
         <Route component={Projects} path="/projects" />
-        <Route component={TestNav} path="/testnav" />
-
       </Switch>
     </>
     

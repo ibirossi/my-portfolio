@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from '@sanity/block-content-to-react';
+import { ImSpinner8 } from "react-icons/im";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -35,15 +36,15 @@ const SinglePost = () => {
       .catch(console.error);
   }, [slug]);
 
-  if (!singlePost) return <div>Loading...</div>;
+  if (!singlePost) return <div className="container mx-auto animate-spin text-yellow-600"><ImSpinner8/></div>;
 
   return (
     <main className="bg-gray-100 min-h-screen p-12">
       <article className="container mx-auto shadow-lg shadow-lg rounded-lg">
         <header className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
-            <div className="bg-white shadow-lg sm:rounded-3xl sm:p-20 bg-clip-padding bg-opacity-60 border border-gray-200" style={{backdropFilter: "blur(5px)"}}>
-              <h1 className="cursive text-3xl lg:text-6xl mb-4">
+            <div className="bg-white shadow-lg sm:rounded-3xl p-1 sm:p-20 bg-clip-padding bg-opacity-60 border border-gray-200" style={{backdropFilter: "blur(5px)"}}>
+              <h1 className="cursive text-xl md:text-2xl lg:text-6xl mb-4">
                 {singlePost.title}
               </h1>
               <div className="flex justify-center text-gray-800">
@@ -52,7 +53,7 @@ const SinglePost = () => {
                 alt={singlePost.name}
                 className="w-10 h-10 rounded-full"
                 />
-                <p className="cursive flex items-center pl-2 text-2xl">{singlePost.name}</p>
+                <p className="cursive flex items-center pl-2 text-lg md:text-xl">{singlePost.name}</p>
               </div>
             </div>
           </div>
@@ -60,7 +61,7 @@ const SinglePost = () => {
           style={{ height: "400px" }}
           />
         </header>
-        <div className="px-16 lg:px-48 py-12 lg-py-20 prose lg:prose-xl max-w-full">
+        <div className="px-4 lg:px-48 py-12 lg:py-20 prose-xs md:prose-lg lg:prose-xl lg:text-justify max-w-full">
         {/* BlockContent (from @sanity/block-content-to-react) */}
         {/* Allows styling, images etc carried out in sanity to appear correctly in app */}
           <BlockContent blocks={singlePost.body} projectId="gnfumd7q" dataset="production"/>

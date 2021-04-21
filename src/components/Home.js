@@ -1,8 +1,9 @@
 import React from "react";
 import HomeInfo from "./HomeInfo";
+import Footer from "./Footer";
 import memoji from "../memoji.png";
 import pointdown from "../pointdown.png"
-import Footer from "./Footer";
+
 
 const Home = () => {
   return (

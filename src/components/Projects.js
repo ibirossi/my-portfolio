@@ -9,7 +9,7 @@ const Projects = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "project"]{
+        `*[_type == "project"] | order(date desc){
         title,
         imagesGallery[]{ asset->{ url }},
         date,
@@ -32,7 +32,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <main className="min-h-screen p-12 w-screen">
+    <main className="min-h-screen p-12">
       <section className="container mx-auto relative">
         <h1 className="text-gray-700 text-2xl md:text-2xl flex justify-center cursive">
           Welcome to my projects page!

@@ -30,9 +30,9 @@ const NavBar = () => {
             onClick={() => setNavbarOpen(!navbarOpen)}
           >
             {navbarOpen ? (
-              <XIcon className="h-8 w-8 p-1 text-black" />
+              <XIcon className="h-8 w-8 p-1 text-black animate-fade-in-slow" />
             ) : (
-              <MenuIcon className="h-8 w-8 text-black p-1 animate-fade-in" />
+              <MenuIcon className="h-8 w-8 text-black p-1 animate-fade-in-slow" />
             )}
           </button>
         </div>

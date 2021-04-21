@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import sanityClient from "../client";
 import { GrLaunch } from "react-icons/gr";
 import { RiGithubFill } from "react-icons/ri";
+import { ImSpinner8 } from "react-icons/im";
 
 const Projects = () => {
   const [projectData, setProjectData] = useState(null);
@@ -32,6 +33,13 @@ const Projects = () => {
       .catch(console.error);
   }, []);
 
+  if (!projectData)
+    return (
+      <div className="container mx-auto animate-spin">
+        <ImSpinner8 />
+      </div>
+    );
+
   return (
     <main className="min-h-screen p-12">
       <section className="container mx-auto relative">
@@ -41,7 +49,10 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectData &&
             projectData.map((project, index) => (
-              <div key={index} className="pt-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+              <div
+                key={index}
+                className="pt-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl"
+              >
                 <div className="lg:flex-col">
                   <div className="lg:flex-shrink-0">
                     <img
@@ -64,7 +75,9 @@ const Projects = () => {
                       </span>
                     </div>
 
-                    <p className="tracking-tighter p-2 text-gray-500 mt-2">{project.description} </p>
+                    <p className="tracking-tighter p-2 text-gray-500 mt-2">
+                      {project.description}{" "}
+                    </p>
 
                     <div className="flex justify-center space-x-10 pt-4">
                       <a
@@ -81,26 +94,24 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                      <RiGithubFill className="h-6 w-6 md:h-8 md-w-8" />
+                        <RiGithubFill className="h-6 w-6 md:h-8 md-w-8" />
                       </a>
-                      
                     </div>
                     <div className="flex space-x-4 pt-4 align-center justify-center items-center">
-                    {project.imagesGallery.map((pic, index) => {
-                  return (
-                    <>
-                      <span key={index}>
-                        <img
-                          className="w-8 h-8 md:w-10 md:h-10"
-                          src={pic.asset.url}
-                          alt={pic.asset.alt}
-                        />
-                      </span>
-                    </>
-                  );
-                })}
+                      {project.imagesGallery.map((pic, index) => {
+                        return (
+                          <>
+                            <span key={index}>
+                              <img
+                                className="w-8 h-8 md:w-10 md:h-10"
+                                src={pic.asset.url}
+                                alt={pic.asset.alt}
+                              />
+                            </span>
+                          </>
+                        );
+                      })}
                     </div>
-                    
                   </div>
                 </div>
               </div>

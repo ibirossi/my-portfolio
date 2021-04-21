@@ -45,6 +45,10 @@ export default {
       type: "url",
     },
     {
+      name: "gitLink",
+      type: "url",
+    },
+    {
       name: "tags",
       type: "array",
       of: [

@@ -17,6 +17,7 @@ const Projects = () => {
         description,
         projectType,
         link,
+        gitLink,
         tags,
         mainImage{
           asset->{
@@ -34,18 +35,17 @@ const Projects = () => {
   return (
     <main className="min-h-screen p-12">
       <section className="container mx-auto relative">
-        <h1 className="text-gray-700 text-2xl md:text-2xl flex justify-center cursive">
+        <h1 className="text-gray-700 text-lg sm:text-2xl md:text-2xl flex justify-center cursive">
           Welcome to my projects page!
         </h1>
-        <h2 className="text-lg text-gray-600 flex justify-center mb-12">hello</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectData &&
             projectData.map((project, index) => (
-              <div className="p-2 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-                <div className="xl:flex">
-                  <div className="xl:flex-shrink-0">
+              <div key={index} className="pt-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+                <div className="lg:flex-col">
+                  <div className="lg:flex-shrink-0">
                     <img
-                      className="h-48 w-full object-cover md:w-48 rounded"
+                      className="h-48 w-full object-cover align-center rounded"
                       src={project.mainImage.asset.url}
                       alt={project.alt}
                     />
@@ -75,7 +75,15 @@ const Projects = () => {
                       >
                         <GrLaunch className="h-6 w-6 md:h-8 md-w-8 shadow-2xl" />
                       </a>
+                      <a
+                        href={project.gitLink}
+                        alt={project.title}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                       <RiGithubFill className="h-6 w-6 md:h-8 md-w-8" />
+                      </a>
+                      
                     </div>
                     <div className="flex space-x-4 pt-4 align-center justify-center items-center">
                     {project.imagesGallery.map((pic, index) => {

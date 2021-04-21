@@ -7,7 +7,7 @@ const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <header className="bg-yellow-400 opacity-100 sticky top-0 z-40 mb-6 pt-6 pb-6 md:pt-1 md:pb-1">
+    // <header className="bg-yellow-400 opacity-100 sticky top-0 z-40 mb-6 pt-6 pb-6 md:pt-1 md:pb-1">
       <nav className="bg-yellow-400 opacity-100 relative flex flex-wrap items-center justify-between px-2 py-3 mb-0 sticky top-0 z-40">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
@@ -67,7 +67,7 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-    </header>
+    // </header>
   );
 };
 

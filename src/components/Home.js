@@ -6,10 +6,10 @@ import Footer from "./Footer";
 
 const Home = () => {
   return (
-    <main className="p-0 relative">
+    <main className="pt-10 relative">
       <section className="container mx-auto flex justify-center align-center md:pt-36 min-h-screen">
-        <div className="">
-          <div className="">
+        <div>
+          <div>
             <div className="flex justify-center align-center items-center">
               <img
                 src={memoji}

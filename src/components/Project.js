@@ -30,7 +30,7 @@ const Project = () => {
       .catch(console.error);
   }, []);
   return (
-    <main className="min-h-max p-12 w-screen bg-gray-100">
+    <main className="min-h-screen p-12 w-screen bg-gray-100">
       <section className="container min-h-screen mx-auto">
         <h1 className="text-gray-700 text-5xl flex justify-center cursive">My Projects</h1>
         <h2 className="text-lg text-gray-600 flex justify-center mb-12">

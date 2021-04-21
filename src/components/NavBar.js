@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import memoji from "../memoji.png";
+import memoji from "../images/memoji.png";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
 
 const NavBar = () => {

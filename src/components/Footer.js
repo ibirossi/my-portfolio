@@ -1,6 +1,6 @@
 import React from "react";
 import { RiLinkedinBoxFill, RiGithubFill } from "react-icons/ri";
-import mailme from "../mailme.png"
+import mailme from "../images/mailme.png"
 import Reveal from "react-reveal/Reveal";
 import Fade from "react-reveal/Fade"
 

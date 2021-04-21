@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import blogpic from "../blogpic.png";
-import thumbsup from "../thumbsup.png";
-import stacks from "../stacks.png";
+import blogpic from "../images/blogpic.png";
+import thumbsup from "../images/thumbsup.png";
+import stacks from "../images/stacks.png";
 import Reveal from "react-reveal/Reveal";
 
 const HomeInfo = () => {

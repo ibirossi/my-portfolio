@@ -6,7 +6,6 @@
   src: local("Varela"), url(./fonts/VarelaRound-Regular.ttf) format("tff");
 }
 
-
 .cursive {
   font-family: "Varela", sans-serif;
   font-weight: 700;
@@ -22,50 +21,11 @@
   font-size: 2.5rem;
 }
 
-.fade-in {
-  animation: animation-fade-in 1s;
-}
-
-.fade-in-fast {
-  animation: animation-fade-in 0.3s;
-}
-
-.fade-in-slow {
-  animation: animation-fade-in 10s;
-}
-
-@keyframes animation-fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes animation-fade-in-fast {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes animation-fade-in-slow {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.nina {
+.letter-jump {
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-.nina > span {
+.letter-jump > span {
   display: inline-block;
   padding: 1em 0;
   opacity: 0;
@@ -76,7 +36,7 @@
   -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
   transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
-.nina::before {
+.letter-jump::before {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -89,53 +49,45 @@
   -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
   transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
-.nina:hover::before {
+.letter-jump:hover::before {
   opacity: 0;
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
 }
-.nina:hover > span {
+.letter-jump:hover > span {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-.nina:hover > span:nth-child(1) {
+.letter-jump:hover > span:nth-child(1) {
   -webkit-transition-delay: 0.045s;
   transition-delay: 0.045s;
 }
-.nina:hover > span:nth-child(2) {
+.letter-jump:hover > span:nth-child(2) {
   -webkit-transition-delay: 0.09s;
   transition-delay: 0.09s;
 }
-.nina:hover > span:nth-child(3) {
+.letter-jump:hover > span:nth-child(3) {
   -webkit-transition-delay: 0.135s;
   transition-delay: 0.135s;
 }
-.nina:hover > span:nth-child(4) {
+.letter-jump:hover > span:nth-child(4) {
   -webkit-transition-delay: 0.18s;
   transition-delay: 0.18s;
 }
-.nina:hover > span:nth-child(5) {
+.letter-jump:hover > span:nth-child(5) {
   -webkit-transition-delay: 0.225s;
   transition-delay: 0.225s;
 }
-.nina:hover > span:nth-child(6) {
+.letter-jump:hover > span:nth-child(6) {
   -webkit-transition-delay: 0.27s;
   transition-delay: 0.27s;
 }
-.nina:hover > span:nth-child(7) {
+.letter-jump:hover > span:nth-child(7) {
   -webkit-transition-delay: 0.315s;
   transition-delay: 0.315s;
 }
-.nina:hover > span:nth-child(8) {
+.letter-jump:hover > span:nth-child(8) {
   -webkit-transition-delay: 0.36s;
   transition-delay: 0.36s;
-}
-.nina:hover > span:nth-child(9) {
-  -webkit-transition-delay: 0.405s;
-  transition-delay: 0.405s;
-}
-.nina:hover > span:nth-child(10) {
-  -webkit-transition-delay: 0.45s;
-  transition-delay: 0.45s;
 }

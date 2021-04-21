@@ -60,7 +60,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 className="no-underline"
               >
-                <button className="focus:outline-none px-3 py-2 mx-auto no-underline uppercase font-bold leading-snug rounded-full bg-yellow-400">
+                <button className="focus:outline-none px-3 py-2 mx-auto text-sm md:text-lg no-underline uppercase font-bold leading-snug rounded-full bg-yellow-400">
                   Resume
                 </button>
               </a>

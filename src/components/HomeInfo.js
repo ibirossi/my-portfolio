@@ -92,7 +92,7 @@ const HomeInfo = () => {
               </h1>
               <div className="prose text-justify text-xs lg:prose-xl p-4 flex flex-col justify-center items-center">
                 <p>
-                 I initially added the blog to try out some of the Sanity.io features.  I'll be posting updates on my journey to becoming a web developer, and maybe some pizza making posts!
+                   I'll be posting updates on my journey to becoming a web developer, and maybe some pizza making posts!
                 </p>
 
                 <NavLink

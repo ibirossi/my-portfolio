@@ -35,20 +35,18 @@ const Footer = () => {
             </Fade>
           </div>
           <a href="mailto:ibi.homaidan@gmail.com">
-          <div className="flex flex-col items-center p-0">
-            <div className="animate-bounce">
-              
-              <Reveal zoom>
-                <img src={mailme} alt="mail me" className="w-20 h-20" />
+            <div className="flex flex-col items-center p-0">
+              <div className="animate-bounce">
+                <Reveal zoom>
+                  <img src={mailme} alt="mail me" className="w-20 h-20" />
+                </Reveal>
+              </div>
+              <Reveal effect="animate-scale-in-up">
+                <h1 className="font-black text-lg">Contact Me</h1>
               </Reveal>
             </div>
-            <Reveal effect="animate-scale-in-up">
-              <h1 className="font-black text-lg">Contact Me</h1>
-            </Reveal>
-          </div>
           </a>
         </div>
-        
       </footer>
     </Fade>
   );

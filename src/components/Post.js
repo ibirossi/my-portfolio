@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom'
 import sanityClient from '../client';
+import { ImSpinner8 } from "react-icons/im";
 
 const Post = () => {
   const [postData, setPostData] = useState(null);
@@ -21,6 +22,13 @@ const Post = () => {
         .then((data) => setPostData(data))
         .catch(console.error)
   }, [])
+
+  if (!postData)
+    return (
+      <div className="flex justify-center align-center items-center mt-48">
+        <ImSpinner8 className="animate-spin w-8 h-8"/>
+      </div>
+    );
 
     return (
         <main className="min-h-full p-12">

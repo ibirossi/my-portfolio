@@ -35,8 +35,8 @@ const Projects = () => {
 
   if (!projectData)
     return (
-      <div className="container mx-auto animate-spin">
-        <ImSpinner8 />
+      <div className="flex justify-center align-center items-center mt-48">
+        <ImSpinner8 className="animate-spin w-8 h-8"/>
       </div>
     );
 
@@ -51,7 +51,7 @@ const Projects = () => {
             projectData.map((project, index) => (
               <div
                 key={index}
-                className="pt-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl"
+                className="pt-5 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl hover:shadow-xl"
               >
                 <div className="lg:flex-col">
                   <div className="lg:flex-shrink-0">

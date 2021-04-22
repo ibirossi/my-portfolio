@@ -38,8 +38,8 @@ const SinglePost = () => {
 
   if (!singlePost)
     return (
-      <div className="container mx-auto animate-spin">
-        <ImSpinner8 />
+      <div className="flex justify-center align-center items-center mt-48">
+        <ImSpinner8 className="animate-spin w-8 h-8"/>
       </div>
     );
 

@@ -27,8 +27,8 @@ const About = () => {
 
   if (!author)
     return (
-      <div className="container mx-auto animate-spin text-yellow-600">
-        <ImSpinner8 />
+      <div className="flex justify-center align-center items-center mt-48">
+        <ImSpinner8 className="animate-spin w-8 h-8" />
       </div>
     );
 
@@ -60,7 +60,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 className="no-underline"
               >
-                <button className="focus:outline-none px-3 py-2 mx-auto text-sm md:text-lg no-underline uppercase font-bold leading-snug rounded-full bg-yellow-400">
+                <button className="focus:outline-none px-3 py-2 mx-auto text-sm md:text-lg no-underline uppercase font-bold leading-snug rounded-full bg-yellow-400 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:shadow-lg">
                   Resume
                 </button>
               </a>

@@ -5,6 +5,7 @@ import SinglePost from './components/SinglePost';
 import Post from './components/Post';
 import NavBar from './components/NavBar';
 import Projects from './components/Projects';
+import NotFound from './components/NotFound'
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route component={SinglePost} path="/post/:slug" />
         <Route component={Post} path="/post" />
         <Route component={Projects} path="/projects" />
+        <Route component={NotFound} />
       </Switch>
     </>
     
